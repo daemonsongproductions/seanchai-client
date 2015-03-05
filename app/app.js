@@ -5,12 +5,22 @@ import config from '../config/environment';
 
 Ember.MODEL_FACTORY_INJECTIONS = true;
 
-var App = Ember.Application.extend({
+var Seanchai = Ember.Application.create({
+  LOG_TRANSITIONS: true,
+  LOG_BINDINGS: true,
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
   Resolver: Resolver
 });
 
-loadInitializers(App, config.modulePrefix);
+Ember.Inflector.inflector.irregular('current_user', 'current_user');
+Seanchai.urls || (Seanchai.urls = {});
+Seanchai.urls.login = location.protocol + "//" + location.host + "/users/sign_in.json";
+Seanchai.urls.register = location.protocol + "//" + location.host + "/users.json";
+Seanchai.urls.logout = location.protocol + "//" + location.host + "/users/sign_out.json";
 
-export default App;
+window.log = Em.Logger;
+
+loadInitializers(Seanchai, config.modulePrefix);
+
+export default Seanchai;
