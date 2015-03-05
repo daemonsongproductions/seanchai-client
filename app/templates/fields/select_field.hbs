@@ -1,0 +1,6 @@
+<label class="control-label" {{bindAttr for='view.inputElement.elementId'}}>{{view.label}}</label>
+<div {{bind-attr class=":controls"}}>
+  {{#if statuses.isLoaded}}
+    {{view Ember.Select classBinding="view.classes" content=statuses value=status_id optionValuePath="content.id" optionLabelPath="content.name" }}
+  {{/if}}
+</div>

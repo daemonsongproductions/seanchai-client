@@ -1,0 +1,18 @@
+<legend>{{controller.username}}</legend>
+<div class="row">
+  <div class="col-md-1"><b>Name: </b></div>
+  <div class="col-md-offset-1 col-md-10"><p>{{controller.name}}</p></div>
+</div>
+<div class="row">
+  <div class="col-md-1"><b>Email: </b></div>
+  <div class="col-md-offset-1 col-md-10"><p>{{controller.email}}</p></div>
+</div>
+<div class="row">
+  <div class="col-lg-1 col-md-2"><p>{{#link-to 'user_stories' controller.model.username}}See My Stories{{/link-to}}</p></div>
+</div>
+{{#if controller.canEdit}}
+  <div class="row">
+    <div class="col-lg-1 col-md-2">{{#link-to 'edit_user' controller.model classNames="btn btn-primary"}}Edit{{/link-to}}</div>
+  </div>
+{{/if}}
+

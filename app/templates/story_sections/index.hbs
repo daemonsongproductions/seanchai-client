@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="one-half">
+    <div class="row">
+      <div class="one-quarter"><b>Description: </b></div>
+      <div class="right one-half">{{{controllers.story.description}}}</div>
+    </div>
+    <div class="row">
+      <div class="one-quarter"><b>Copyright: </b></div>
+      <div class="right one-half"><p>{{controllers.story.copyright}}</p></div>
+    </div>
+    {{#if controllers.story.editable}}
+      <div class="row">
+        <p><div class="col-sm-1">{{#link-to 'stories_edit' controllers.story.model classNames="btn btn-primary"}}Edit Story Details{{/link-to}}</div></p>
+      </div>
+      <div class="row">
+        <p><div class="col-sm-1">{{#link-to 'story_sections_new' controllers.story.model.id classNames="btn btn-default"}}Add Section{{/link-to}}</div></p>
+      </div>
+    {{/if}}
+  </div>
+  <div class="one-third right">
+    <p><b>Table of Contents</b></p>
+    <ul>
+      {{#each controller}}
+        {{#if title}}
+          <li>
+            {{#link-to 'story_sections_show' this.order}}{{title}}{{/link-to}}
+          </li>
+        {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
+

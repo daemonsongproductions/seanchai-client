@@ -1,0 +1,21 @@
+
+<form {{action login content on="submit"}} class="two-thirds">
+  <legend>Login</legend>
+    {{#if errorMsg}}
+      <div class="alert alert-danger">
+        {{errorMsg}}
+      </div>
+    {{/if}}
+  <div class="row">
+    {{view Seanchai.TextField valueBinding="username" fieldId="username" action="login" label="Username"}}
+  </div>
+  <div class="row">
+    {{view Seanchai.TextField valueBinding="password" fieldId="password" action="login" type="password" viewName="passwordField" label="Password"}}
+  </div>
+  <div class="row">
+      <div class="controls">
+        <input {{action login}} type="submit" class="btn btn-primary" value="Login" />
+        <input {{action cancel}} type="submit" class="btn" value="Cancel" />
+      </div>
+  </div>
+</form>
