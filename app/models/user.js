@@ -31,3 +31,5 @@ Seanchai.User = DS.Model.extend({
     }
   }.property('role')
 });
+
+Ember.Inflector.inflector.irregular('current_user', 'current_user');
