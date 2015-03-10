@@ -1,4 +1,6 @@
-Seanchai.StoriesIndexController = Ember.ArrayController.extend({
+import Ember from "ember";
+
+export default Ember.ArrayController.extend({
 
 
   hideNew: function() {

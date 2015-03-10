@@ -1,4 +1,6 @@
-Seanchai.UserController = Ember.ObjectController.extend({
+import Ember from "ember";
+
+export default Ember.ObjectController.extend({
 
   isMe: function(){
     return Seanchai.currentUser.get('username') === this.get('username');

@@ -1,7 +1,9 @@
-Seanchai.StoriesNewController = Ember.ObjectController.extend({
+import Ember from "ember";
+
+export default Ember.ObjectController.extend({
   actions: {
     cancel: function(){
-      this.transitionToRoute('stories');
+      this.transitionToRoute('story_sections_index', this);
     },
 
     submit: function(){

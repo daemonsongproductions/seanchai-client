@@ -1,4 +1,6 @@
-Seanchai.LoginStateManager = Ember.StateManager.create({
+import Ember from "ember";
+
+export default Ember.StateManager.create({
   initialState: 'notAuthenticated',
   authenticated: Ember.State.create({
     enter: function() {

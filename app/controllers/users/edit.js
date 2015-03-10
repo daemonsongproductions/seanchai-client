@@ -1,4 +1,6 @@
-Seanchai.EditUserController = Ember.ObjectController.extend({
+import Ember from "ember";
+
+export default Ember.ObjectController.extend({
 
   clearErrorMsg: function() {
     this.set("errorMsg", "");

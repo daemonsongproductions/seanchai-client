@@ -1,4 +1,6 @@
-Seanchai.StorySectionsShowController = Ember.ObjectController.extend({
+import Ember from "ember";
+
+export default Ember.ObjectController.extend({
   sortProperties: ['title'],
   sortAscending: true,
   needs: "story",

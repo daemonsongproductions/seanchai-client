@@ -1,4 +1,6 @@
-Seanchai.StorySectionsIndexController = Ember.ArrayController.extend({
+import Ember from "ember";
+
+export default Ember.ArrayController.extend({
   sortProperties: ['order'],
   sortAscending: true,
   needs: "story",

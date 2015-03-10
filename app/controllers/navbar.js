@@ -1,4 +1,6 @@
-Seanchai.NavbarController = Ember.ObjectController.extend({
+import Ember from "ember";
+
+export default Ember.ObjectController.extend({
   authStateBinding: Ember.Binding.oneWay('Seanchai.LoginStateManager.currentState'),
   authState: null,
   authenticated: (function() {
