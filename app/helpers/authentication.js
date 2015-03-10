@@ -1,3 +1,4 @@
+import Ember from "ember";
 
 Seanchai.Authentication || (Seanchai.Authentication = {});
 
