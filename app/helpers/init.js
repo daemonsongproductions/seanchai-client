@@ -1,3 +1,7 @@
+import Ember from "ember";
+import DS from "ember-data";
+
+
 Seanchai.initApp = function(currentUser) {
   Seanchai.initCurrentUser(currentUser);
   if (Seanchai.currentUser) {

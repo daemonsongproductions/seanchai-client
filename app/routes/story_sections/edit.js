@@ -1,4 +1,5 @@
 import Ember from "ember";
+import DS from "ember-data";
 
 // TODO: Add in editable mixin when it's done.
 
