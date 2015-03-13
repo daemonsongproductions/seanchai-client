@@ -1,6 +1,8 @@
-Seanchai.StorySectionsEditRoute = Seanchai.EditableRoute.extend({
+import Ember from "ember";
+
+export default Ember.Route.extend({
   model: function(params) {
-    return this.get('store').find_section(this.modelFor('story').get('id'), params.order);
+    return this.get('store').createRecord('story_section', {story_id: params['story_id']});
   },
   setupController: function(controller, model) {
     controller.set('model', model );

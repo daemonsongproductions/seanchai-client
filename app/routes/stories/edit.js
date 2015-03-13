@@ -1,5 +1,6 @@
 import Ember from "ember";
 
+// TODO: add in editable mixin when it's done
 export default Ember.Route.extend({
   templateName: "stories/edit",
   model: function(params) {

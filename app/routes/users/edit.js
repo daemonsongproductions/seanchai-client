@@ -1,4 +1,6 @@
-Seanchai.EditUserRoute = Ember.Route.extend({
+import Ember from "ember";
+
+export default Ember.Route.extend({
   templateName: "users/edit",
   model: function(params) {
     return this.get('store').find('user', params.username);

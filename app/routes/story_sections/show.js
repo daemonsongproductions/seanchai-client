@@ -1,4 +1,6 @@
-Seanchai.StorySectionsShowRoute = Ember.Route.extend({
+import Ember from "ember";
+
+export default Ember.Route.extend({
   model: function(params) {
     return this.get('store').find_section(this.modelFor('story').get('id'), params.order);
   },
