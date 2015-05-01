@@ -1,5 +1,5 @@
-import initCurrentUser from '/app/helpers/init-current-user';
-import LoginStateManager from '/app/components/login-state-manager';
+import initCurrentUser from 'seanchai-client/utils/init-current-user';
+import LoginStateManager from 'seanchai-client/utils/login-state-manager';
 
 var initApp = function(currentUser) {
   initCurrentUser(currentUser);

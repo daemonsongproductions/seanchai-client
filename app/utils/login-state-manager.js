@@ -1,9 +1,10 @@
 import Ember from 'ember';
 
-var LoginStateManager = Ember.StateManager.create({
+var LoginStateManager = Ember.StateManager.extend({
   initialState: 'notAuthenticated',
   authenticated: Ember.State.create({
     enter: function() {
+      var log = Ember.Logger;
       return log.info("LoginStateManager enter state: " + this.name);
     },
     logout: function(manager, context) {
@@ -12,6 +13,7 @@ var LoginStateManager = Ember.StateManager.create({
   }),
   notAuthenticated: Ember.State.create({
     enter: function() {
+      var log = Ember.Logger;
       return log.info("LoginStateManager enter state: " + this.name);
     },
     login: function(manager, credentials) {
