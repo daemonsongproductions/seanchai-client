@@ -1,1 +1,0 @@
-Seanchai.ApplicationView = Ember.View.extend({});

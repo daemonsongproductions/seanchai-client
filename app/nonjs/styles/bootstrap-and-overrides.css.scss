@@ -1,0 +1,153 @@
+@import "bootstrap";
+@import "bootstrap/theme";
+@import "colors";
+@import "compass";
+
+
+
+$bgDefault: $lightBeige;
+$bgHighlight: $darkBeige;
+$colDefault: black;
+$colHighlight: $darkBrown;
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#{headings(all)}, li, legend, .navbar {
+  font-family: 'Merriweather', serif;
+}
+
+h1 { font-size: 3em;}
+h2 { font-size: 2em;}
+p { font-size: 1em; }
+
+
+.seanchai-container {
+  .navbar-inverse {
+    @include background(linear-gradient(bottom, scale_color($bgDefault, $lightness: -15%), $bgDefault));
+    border-color: $bgHighlight;
+    .navbar-brand {
+      color: $colDefault;
+      &:hover, &:focus {
+        color: $colHighlight;
+      }
+    }
+    .navbar-text {
+      color: $colDefault;
+    }
+    .navbar-nav {
+      > li {
+        > a {
+          text-shadow: none;
+          color: $colDefault;
+          &:hover, &:focus {
+            color: $colHighlight;
+          }
+        }
+      }
+      > .active {
+        > a, > a:hover, > a:focus {
+          color: $colHighlight;
+          @include background(linear-gradient(bottom, scale_color($bgDefault, $lightness: 45%), $bgDefault))
+        }
+      }
+      > .open {
+        > a, > a:hover, > a:focus {
+          color: $colHighlight;
+          @include background(linear-gradient(bottom, scale_color($bgDefault, $lightness: 45%), $bgDefault))
+        }
+      }
+    }
+    .navbar-toggle {
+      border-color: $bgHighlight;
+      &:hover, &:focus {
+        background-color: $bgHighlight;
+      }
+      .icon-bar {
+        background-color: $colDefault;
+      }
+    }
+    .navbar-collapse,
+    .navbar-form {
+      border-color: $colDefault;
+    }
+    .navbar-link {
+      color: $colDefault;
+      &:hover {
+        color: $colHighlight;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu {
+      > li > a {
+        color: $colDefault;
+        &:hover, &:focus {
+          color: $colHighlight;
+        }
+      }
+      > .active {
+        > a, > a:hover, > a:focus, {
+          color: $colHighlight;
+          background-color: $bgHighlight;
+        }
+      }
+    }
+  }
+}
+
+.dashboard-panel .table td {
+  border-top: 0px;
+  cursor: pointer;
+}
+
+.panel {
+  padding: 0px;
+  border-color: $oliveGreen;
+}
+
+.panel-body.dashboard-panel {
+  padding: 0px;
+}
+
+.btn-primary {
+  @include background(linear-gradient(bottom, #617F59 0%, scale_color(#617F59, $lightness: 25%)));
+  border-color: #617F59;
+}
+
+.btn-primary:hover {
+  @include background(linear-gradient(bottom, #617F59 50%, scale_color(#617F59, $lightness: 25%)));
+  border-color: #617F59;
+}
+
+.full-width {
+  @extend .col-sm-12;
+}
+
+.one-third {
+  @extend .col-sm-4;
+}
+
+.two-thirds {
+  @extend .col-sm-7;
+}
+
+.one-quarter {
+  @extend .col-sm-3;
+}
+
+.three-quarters {
+  @extend .col-sm-9
+}
+
+.one-half {
+  @extend .col-sm-6
+}
+
+.right {
+  @extend .col-sm-offset-1;
+}
